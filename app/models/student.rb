@@ -18,21 +18,8 @@ class Student < ActiveRecord::Base
     if query.empty?
       results = self.all
     else
-<<<<<<< HEAD
       results = self.where("NAME like ?", "%#{query}%")
-=======
-      
-      results = self.all.collect do |student|
-        
-        if student.name && student.name.upcase.include?(query.upcase)
-          student
-        end
-        
-      end
-      
->>>>>>> d911991ee8eeb803411090a27e4b954d812b424a
     end
-    results.compact
   end
 
 end
